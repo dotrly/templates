@@ -10,7 +10,7 @@
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "@notapublicfigureanymore/relay-sdk": "latest",
+    "@dotrly/sdk": "latest",
     "lucide-react": "^0.562.0",
     "tailwindcss": "^4.0.0",
     "@tailwindcss/vite": "^4.0.0",
