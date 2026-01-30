@@ -104,7 +104,7 @@ import {
   Input,
   Dialog,
   // ... and 35+ more components
-} from '@notapublicfigureanymore/relay-sdk';
+} from '@dotrly/sdk';
 
 function MyComponent() {
   return (
@@ -126,7 +126,7 @@ function MyComponent() {
 Access device capabilities with built-in hooks:
 
 ```tsx
-import { useNotifications, useGeolocation, useCamera } from '@notapublicfigureanymore/relay-sdk';
+import { useNotifications, useGeolocation, useCamera } from '@dotrly/sdk';
 
 function DeviceFeatures() {
   const { sendNotification } = useNotifications();

@@ -7,7 +7,7 @@ Beyond UI components, Relay provides powerful access to the underlying system vi
 The SDK provides a `useOllama` hook to interact directly with a local Ollama instance managed by the Relay Helper.
 
 ```tsx
-import { useOllama } from '@notapublicfigureanymore/relay-sdk';
+import { useOllama } from '@dotrly/sdk';
 
 function AIAssistant() {
   const { 

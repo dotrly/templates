@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { SafeAreaProvider } from '@notapublicfigureanymore/relay-sdk';
+import { SafeAreaProvider } from '@dotrly/sdk';
 import App from './App';
 import './index.css';
 
