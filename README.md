@@ -166,6 +166,7 @@ The template includes mandatory security components:
 ## Documentation
 
 - [Components Guide](./docs/COMPONENTS.md) - Complete SDK reference
+- [System SDK](./docs/SDK.md) - AI & File System
 - [CLI Commands](./docs/CLI.md) - Development and build commands
 - [Security](./docs/LOCKED.md) - App security and lifecycle
 - [Configuration](./docs/README.md) - Detailed setup guide
