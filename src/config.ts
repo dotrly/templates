@@ -6,14 +6,14 @@ export const userConfig = {
     showCloseButton: true,
 
     // Appearance of the close button: 'x' or 'minus'
-    closeButtonVariant: 'x' as 'x' | 'minus',
+    closeButtonVariant: 'minus' as 'x' | 'minus',
 
     // Corner radius of the close button
     closeButtonRadius: 'full' as 'full' | 'lg' | 'md' | 'sm',
 
     // Title Configuration
     showTitle: true,
-    title: 'App Name',
+    title: 'Relay',
 
     // Dynamic Colors
     colors: {

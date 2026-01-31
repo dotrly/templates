@@ -2,7 +2,6 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/inter";
-@source "../node_modules/@relay/sdk/dist/**/*.js";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -39,63 +38,46 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-
-  /* Custom App Palette (moved from index.html for runtime availability) */
-  --bg-color: #FFFFFF;
-  --surface-color: #FAFAFA;
-  --border-color: #E5E5E5;
-  --text-primary: #171717;
-  --text-secondary: #737373;
-  --text-tertiary: #A3A3A3;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Custom App Palette - Dark Mode */
-    --bg-color: #000000;
-    --surface-color: #171717;
-    --border-color: #262626;
-    --text-primary: #FFFFFF;
-    --text-secondary: #A3A3A3;
-    --text-tertiary: #525252;
-
     --background: oklch(0.145 0 0);
     --foreground: oklch(0.985 0 0);
     --card: oklch(0.205 0 0);
     --card-foreground: oklch(0.985 0 0);
     --popover: oklch(0.205 0 0);
     --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.87 0.00 0);
+    --primary: oklch(0.985 0 0);
     --primary-foreground: oklch(0.205 0 0);
     --secondary: oklch(0.269 0 0);
     --secondary-foreground: oklch(0.985 0 0);
     --muted: oklch(0.269 0 0);
     --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.371 0 0);
+    --accent: oklch(0.269 0 0);
     --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.809 0.105 251.813);
-    --chart-2: oklch(0.623 0.214 259.815);
-    --chart-3: oklch(0.546 0.245 262.881);
-    --chart-4: oklch(0.488 0.243 264.376);
-    --chart-5: oklch(0.424 0.199 265.638);
+    --destructive: oklch(0.396 0.141 25.723);
+    --border: oklch(0.269 0 0);
+    --input: oklch(0.269 0 0);
+    --ring: oklch(0.439 0 0);
+    --chart-1: oklch(0.488 0.243 264.376);
+    --chart-2: oklch(0.418 0.219 253.978);
+    --chart-3: oklch(0.854 0.141 78.487);
+    --chart-4: oklch(0.627 0.265 303.9);
+    --chart-5: oklch(0.536 0.254 1.259);
     --sidebar: oklch(0.205 0 0);
     --sidebar-foreground: oklch(0.985 0 0);
     --sidebar-primary: oklch(0.488 0.243 264.376);
     --sidebar-primary-foreground: oklch(0.985 0 0);
     --sidebar-accent: oklch(0.269 0 0);
     --sidebar-accent-foreground: oklch(0.985 0 0);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
+    --sidebar-border: oklch(0.269 0 0);
+    --sidebar-ring: oklch(0.439 0 0);
   }
 }
 
 @theme inline {
-  --font-sans: 'Inter Variable', sans-serif;
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -137,15 +119,72 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  /* Native app feel */
+  html {
+    height: 100%;
+    overscroll-behavior: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    overflow: hidden;
   }
 
   body {
-    @apply font-sans bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    /* Use 100% to respect keyboard resizing */
+    min-height: 100%;
+    height: 100%;
+    overscroll-behavior: none;
+    overflow: hidden;
+    scroll-behavior: smooth;
   }
 
-  html {
-    @apply font-sans;
+  /* Root container */
+  #root {
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    touch-action: pan-x pan-y;
+  }
+
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Allow text selection in input fields */
+  input,
+  textarea,
+  [contenteditable="true"] {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+
+  /* Prevent iOS zoom on input focus */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s linear infinite;
+}
+
+@keyframes gradient {
+
+  0%,
+  100% {
+    background-position: left center;
+  }
+
+  50% {
+    background-position: right center;
   }
 }
