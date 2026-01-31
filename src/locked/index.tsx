@@ -9,6 +9,8 @@ interface LockedProps {
 export function Locked({ children, className = '' }: LockedProps) {
   const { showCloseButton, closeButtonVariant, showTitle, title, colors } = userConfig.window;
   const close = () => window.parent.postMessage('relay:close', '*');
+  const minimize = () => window.parent.postMessage('relay:minimize', '*');
+  const handleAction = closeButtonVariant === 'minus' ? minimize : close;
 
   if (!showCloseButton) return <>{children}</>;
 
@@ -22,7 +24,7 @@ export function Locked({ children, className = '' }: LockedProps) {
         )}
 
         <button
-          onClick={close}
+          onClick={handleAction}
           className={`w-12 h-12 rounded-[18px] flex items-center justify-center transition-all hover:rotate-90 shadow-sm
             ${colors?.light?.bg || 'bg-zinc-100'} ${colors?.dark?.bg || 'dark:bg-zinc-900'}
             ${colors?.light?.icon || 'text-zinc-500'} ${colors?.dark?.icon || 'dark:text-zinc-400'}

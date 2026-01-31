@@ -1,17 +1,21 @@
 {
-  "name": "Template",
+  "name": "Relay",
   "slug": "template",
   "version": "1.0.0",
   "build": "1",
   "bundleId": "com.relay.template",
-  "description": "A new Relay application.",
-  "author": "Anonymous",
+  "description": "The official Relay starter template.",
+  "author": "dotrly",
   "icon": "assets/icon.png",
   "categories": [
-    "Utilities"
+    "Utilities",
+    "Chat",
+    "Productivity"
   ],
   "minRelayVersion": "1.0.0",
-  "permissions": [],
+  "permissions": [
+    "direct"
+  ],
   "theme": {
     "accentColor": "#007AFF",
     "mode": "system"

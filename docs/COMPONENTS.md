@@ -5,7 +5,7 @@ The Relay SDK provides a comprehensive set of modern React components, hooks, an
 ## Installation
 
 ```bash
-npm install @notapublicfigureanymore/relay-sdk
+npm install @dotrly/sdk
 ```
 
 **Peer dependencies required:**
@@ -22,7 +22,7 @@ Essential components for handling device-specific features and safe areas.
 Wrap your app in `SafeAreaProvider` to enable safe area support and keyboard handling.
 
 ```tsx
-import { SafeAreaProvider } from '@notapublicfigureanymore/relay-sdk';
+import { SafeAreaProvider } from '@dotrly/sdk';
 
 export default function App() {
   return (
@@ -38,7 +38,7 @@ export default function App() {
 Container that respects device safe area insets (notches, home indicators).
 
 ```tsx
-import { SafeAreaView } from '@notapublicfigureanymore/relay-sdk';
+import { SafeAreaView } from '@dotrly/sdk';
 
 <SafeAreaView edges={['top', 'bottom']}>
   <YourContent />
@@ -50,7 +50,7 @@ import { SafeAreaView } from '@notapublicfigureanymore/relay-sdk';
 Automatically adjusts content when the virtual keyboard appears.
 
 ```tsx
-import { KeyboardAvoidingView } from '@notapublicfigureanymore/relay-sdk';
+import { KeyboardAvoidingView } from '@dotrly/sdk';
 
 <KeyboardAvoidingView behavior="padding">
   <Input placeholder="Type here..." />
@@ -63,7 +63,7 @@ import { KeyboardAvoidingView } from '@notapublicfigureanymore/relay-sdk';
 Pre-built header component with safe area support and back navigation.
 
 ```tsx
-import { PlatformHeader } from '@notapublicfigureanymore/relay-sdk';
+import { PlatformHeader } from '@dotrly/sdk';
 
 <PlatformHeader
   title="My App"
@@ -86,7 +86,7 @@ Complete component library with 40+ modern components. All components support:
 
 #### Button
 ```tsx
-import { Button } from '@notapublicfigureanymore/relay-sdk';
+import { Button } from '@dotrly/sdk';
 
 <Button>Click me</Button>
 <Button variant="outline">Outline</Button>
@@ -97,7 +97,7 @@ import { Button } from '@notapublicfigureanymore/relay-sdk';
 
 #### Input
 ```tsx
-import { Input } from '@notapublicfigureanymore/relay-sdk';
+import { Input } from '@dotrly/sdk';
 
 <Input placeholder="Enter text..." />
 <Input type="email" placeholder="Email" />
@@ -106,7 +106,7 @@ import { Input } from '@notapublicfigureanymore/relay-sdk';
 
 #### Card
 ```tsx
-import { Card, CardHeader, CardTitle, CardContent } from '@notapublicfigureanymore/relay-sdk';
+import { Card, CardHeader, CardTitle, CardContent } from '@dotrly/sdk';
 
 <Card>
   <CardHeader>
@@ -120,7 +120,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '@notapublicfigureanymo
 
 #### Dialog
 ```tsx
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from '@notapublicfigureanymore/relay-sdk';
+import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from '@dotrly/sdk';
 
 <Dialog>
   <DialogTrigger asChild>
@@ -139,7 +139,7 @@ import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle } from 
 
 #### Select
 ```tsx
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@notapublicfigureanymore/relay-sdk';
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@dotrly/sdk';
 
 <Select>
   <SelectTrigger>
@@ -154,7 +154,7 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@
 
 #### Checkbox
 ```tsx
-import { Checkbox } from '@notapublicfigureanymore/relay-sdk';
+import { Checkbox } from '@dotrly/sdk';
 
 <Checkbox id="terms" />
 <label htmlFor="terms">Accept terms</label>
@@ -162,7 +162,7 @@ import { Checkbox } from '@notapublicfigureanymore/relay-sdk';
 
 #### Radio Group
 ```tsx
-import { RadioGroup, RadioGroupItem } from '@notapublicfigureanymore/relay-sdk';
+import { RadioGroup, RadioGroupItem } from '@dotrly/sdk';
 
 <RadioGroup defaultValue="option1">
   <div className="flex items-center space-x-2">
@@ -178,7 +178,7 @@ import { RadioGroup, RadioGroupItem } from '@notapublicfigureanymore/relay-sdk';
 
 #### Switch
 ```tsx
-import { Switch } from '@notapublicfigureanymore/relay-sdk';
+import { Switch } from '@dotrly/sdk';
 
 <Switch />
 ```
@@ -187,7 +187,7 @@ import { Switch } from '@notapublicfigureanymore/relay-sdk';
 
 #### Tabs
 ```tsx
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@notapublicfigureanymore/relay-sdk';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@dotrly/sdk';
 
 <Tabs defaultValue="tab1">
   <TabsList>
@@ -201,7 +201,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@notapublicfigureanymo
 
 #### Accordion
 ```tsx
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@notapublicfigureanymore/relay-sdk';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@dotrly/sdk';
 
 <Accordion type="single" collapsible>
   <AccordionItem value="item-1">
@@ -213,7 +213,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@n
 
 #### Collapsible
 ```tsx
-import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@notapublicfigureanymore/relay-sdk';
+import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@dotrly/sdk';
 
 <Collapsible>
   <CollapsibleTrigger>Toggle</CollapsibleTrigger>
@@ -225,7 +225,7 @@ import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@notapublic
 
 #### Table
 ```tsx
-import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@notapublicfigureanymore/relay-sdk';
+import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@dotrly/sdk';
 
 <Table>
   <TableHeader>
@@ -245,7 +245,7 @@ import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@
 
 #### Badge
 ```tsx
-import { Badge } from '@notapublicfigureanymore/relay-sdk';
+import { Badge } from '@dotrly/sdk';
 
 <Badge>Default</Badge>
 <Badge variant="secondary">Secondary</Badge>
@@ -254,7 +254,7 @@ import { Badge } from '@notapublicfigureanymore/relay-sdk';
 
 #### Progress
 ```tsx
-import { Progress } from '@notapublicfigureanymore/relay-sdk';
+import { Progress } from '@dotrly/sdk';
 
 <Progress value={75} />
 ```
@@ -263,7 +263,7 @@ import { Progress } from '@notapublicfigureanymore/relay-sdk';
 
 #### Navigation Menu
 ```tsx
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent } from '@notapublicfigureanymore/relay-sdk';
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent } from '@dotrly/sdk';
 
 <NavigationMenu>
   <NavigationMenuList>
@@ -277,7 +277,7 @@ import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuT
 
 #### Breadcrumb
 ```tsx
-import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from '@notapublicfigureanymore/relay-sdk';
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from '@dotrly/sdk';
 
 <Breadcrumb>
   <BreadcrumbList>
@@ -296,7 +296,7 @@ import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbS
 
 #### Sheet (Slide-out panel)
 ```tsx
-import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from '@notapublicfigureanymore/relay-sdk';
+import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from '@dotrly/sdk';
 
 <Sheet>
   <SheetTrigger asChild>
@@ -313,7 +313,7 @@ import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from '@not
 
 #### Drawer (Mobile-friendly slide-out)
 ```tsx
-import { Drawer, DrawerTrigger, DrawerContent, DrawerHeader, DrawerTitle } from '@notapublicfigureanymore/relay-sdk';
+import { Drawer, DrawerTrigger, DrawerContent, DrawerHeader, DrawerTitle } from '@dotrly/sdk';
 
 <Drawer>
   <DrawerTrigger asChild>
@@ -330,7 +330,7 @@ import { Drawer, DrawerTrigger, DrawerContent, DrawerHeader, DrawerTitle } from 
 
 #### Popover
 ```tsx
-import { Popover, PopoverTrigger, PopoverContent } from '@notapublicfigureanymore/relay-sdk';
+import { Popover, PopoverTrigger, PopoverContent } from '@dotrly/sdk';
 
 <Popover>
   <PopoverTrigger asChild>
@@ -344,7 +344,7 @@ import { Popover, PopoverTrigger, PopoverContent } from '@notapublicfigureanymor
 
 #### Tooltip
 ```tsx
-import { Tooltip, TooltipTrigger, TooltipContent } from '@notapublicfigureanymore/relay-sdk';
+import { Tooltip, TooltipTrigger, TooltipContent } from '@dotrly/sdk';
 
 <Tooltip>
   <TooltipTrigger asChild>
@@ -358,7 +358,7 @@ import { Tooltip, TooltipTrigger, TooltipContent } from '@notapublicfigureanymor
 
 #### Alert Dialog
 ```tsx
-import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogCancel, AlertDialogAction } from '@notapublicfigureanymore/relay-sdk';
+import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogCancel, AlertDialogAction } from '@dotrly/sdk';
 
 <AlertDialog>
   <AlertDialogTrigger asChild>
@@ -381,7 +381,7 @@ import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader,
 
 #### Avatar
 ```tsx
-import { Avatar, AvatarImage, AvatarFallback } from '@notapublicfigureanymore/relay-sdk';
+import { Avatar, AvatarImage, AvatarFallback } from '@dotrly/sdk';
 
 <Avatar>
   <AvatarImage src="user.jpg" alt="User" />
@@ -391,7 +391,7 @@ import { Avatar, AvatarImage, AvatarFallback } from '@notapublicfigureanymore/re
 
 #### Skeleton
 ```tsx
-import { Skeleton } from '@notapublicfigureanymore/relay-sdk';
+import { Skeleton } from '@dotrly/sdk';
 
 <Skeleton className="w-32 h-4" />
 <Skeleton className="w-full h-8" />
@@ -399,7 +399,7 @@ import { Skeleton } from '@notapublicfigureanymore/relay-sdk';
 
 #### Separator
 ```tsx
-import { Separator } from '@notapublicfigureanymore/relay-sdk';
+import { Separator } from '@dotrly/sdk';
 
 <div>
   <p>Content above</p>
@@ -410,7 +410,7 @@ import { Separator } from '@notapublicfigureanymore/relay-sdk';
 
 #### Scroll Area
 ```tsx
-import { ScrollArea } from '@notapublicfigureanymore/relay-sdk';
+import { ScrollArea } from '@dotrly/sdk';
 
 <ScrollArea className="h-32">
   <p>Long content that scrolls...</p>
@@ -426,7 +426,7 @@ Powerful hooks for device capabilities and app functionality.
 Get information about the current device environment.
 
 ```tsx
-import { usePlatform } from '@notapublicfigureanymore/relay-sdk';
+import { usePlatform } from '@dotrly/sdk';
 
 const { os, isMobile, isIOS, isAndroid, isWeb } = usePlatform();
 
@@ -440,7 +440,7 @@ if (isMobile) {
 Send system notifications and manage app badges.
 
 ```tsx
-import { useNotifications } from '@notapublicfigureanymore/relay-sdk';
+import { useNotifications } from '@dotrly/sdk';
 
 const { requestPermission, sendNotification, setBadge, permission } = useNotifications();
 
@@ -464,7 +464,7 @@ await setBadge(5);
 Access the system clipboard with built-in history management.
 
 ```tsx
-import { useClipboard } from '@notapublicfigureanymore/relay-sdk';
+import { useClipboard } from '@dotrly/sdk';
 
 const { copyText, readText, history } = useClipboard();
 
@@ -483,7 +483,7 @@ console.log(history); // [{ content: '...', timestamp: 123 }, ...]
 Access device location and calculate distances.
 
 ```tsx
-import { useGeolocation } from '@notapublicfigureanymore/relay-sdk';
+import { useGeolocation } from '@dotrly/sdk';
 
 const { latitude, longitude, loading, error, getLocation } = useGeolocation();
 
@@ -503,7 +503,7 @@ return <div>Lat: {latitude}, Lng: {longitude}</div>;
 Camera and media capture functionality.
 
 ```tsx
-import { useCamera } from '@notapublicfigureanymore/relay-sdk';
+import { useCamera } from '@dotrly/sdk';
 
 const { devices, startCamera, stopCamera, capturePhoto } = useCamera();
 
@@ -522,7 +522,7 @@ await stopCamera();
 Track virtual keyboard state for mobile devices.
 
 ```tsx
-import { useKeyboard } from '@notapublicfigureanymore/relay-sdk';
+import { useKeyboard } from '@dotrly/sdk';
 
 const keyboard = useKeyboard();
 
@@ -537,7 +537,7 @@ const keyboard = useKeyboard();
 Detect if the app is running on a mobile device.
 
 ```tsx
-import { useMobile } from '@notapublicfigureanymore/relay-sdk';
+import { useMobile } from '@dotrly/sdk';
 
 const isMobile = useMobile();
 
@@ -551,7 +551,7 @@ if (isMobile) {
 Focus timer functionality for productivity apps.
 
 ```tsx
-import { useFocusTimer } from '@notapublicfigureanymore/relay-sdk';
+import { useFocusTimer } from '@dotrly/sdk';
 
 const { start, pause, reset, timeLeft, isActive } = useFocusTimer();
 
@@ -590,7 +590,7 @@ Ensure your `tailwind.config.js` includes the SDK's content paths:
 module.exports = {
   content: [
     './src/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@notapublicfigureanymore/relay-sdk/dist/**/*.{js,ts,jsx,tsx}'
+    './node_modules/@dotrly/sdk/dist/**/*.{js,ts,jsx,tsx}'
   ],
   // ... rest of your config
 }
@@ -657,7 +657,7 @@ import {
   Input,
   useNotifications,
   usePlatform
-} from '@notapublicfigureanymore/relay-sdk';
+} from '@dotrly/sdk';
 import { Bell } from 'lucide-react';
 
 function App() {
