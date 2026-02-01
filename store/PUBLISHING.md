@@ -13,6 +13,7 @@ Before running `relay publish`, ensure your app meets the following criteria:
     - Description is helpful and well-formatted.
     - Screenshots represent the actual app experience.
 - [ ] **Permissions**: Only requested the minimum permissions needed for the app to function.
+- [ ] **GitHub Auth**: Logged in via `gh auth login`. Your username must match your `bundleId` namespace.
 
 ## The Review Process
 
