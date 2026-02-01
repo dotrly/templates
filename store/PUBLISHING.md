@@ -14,6 +14,9 @@ Before running `relay publish`, ensure your app meets the following criteria:
     - Screenshots represent the actual app experience.
 - [ ] **Permissions**: Only requested the minimum permissions needed for the app to function.
 - [ ] **GitHub Auth**: Logged in via `gh auth login`. Your username must match your `bundleId` namespace.
+- [ ] **App Size**: Bundle is ideally under **100MB**. 
+    > [!TIP]
+    > **Relay Efficiency**: Remember that Relay apps are incredibly lean. An 800MB legacy app often compresses to ~2MB on our platform. Don't be afraid to keep it light!
 
 ## The Review Process
 
