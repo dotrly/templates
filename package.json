@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "relay build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "publish": "relay publish",
+    "install": "relay install"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
